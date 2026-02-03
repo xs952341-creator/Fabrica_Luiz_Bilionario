@@ -1,0 +1,16 @@
+
+name: Robo_Autonomo_Luiz
+on:
+  schedule:
+    - cron: '0 * * * *' # Acorda a cada 1 hora sozinho
+  workflow_dispatch: 
+
+jobs:
+  execucao_autonoma:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Operar
+        run: |
+          echo "? O corpo digital de Luiz est? operando em $(date)"
